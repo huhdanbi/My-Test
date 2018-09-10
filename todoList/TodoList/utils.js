@@ -1,5 +1,3 @@
-'use strict';
-
 var utils = {
     $ : function( elem , parentElem){
         return ( parentElem || document ).querySelector(elem);

@@ -1,36 +1,19 @@
-function TodoList( utils ){
+function TodoList(){
 
     var todoListWrap = utils.$('#TodoList');
-    var todoValueElem = utils.$$('.inp_todo', todoListWrap );
-    var listTodo = utils.$$('.list_chkBox', todoListWrap );
+    var todoValueElem = utils.$('.inp_todo', todoListWrap );
+    var listTodo = utils.$('.list_chkBox', todoListWrap );
     var txt = '';
 
     //값 업데이트..
     function updateValue(){
-        todoValueElem.forEach(function(elem){
-            txt += '<li><label class="tit_chkList"><input type="checkbox" class="chk_todo">';
-            txt += '<span class="txt_todo"> ' + elem.value + '</span>';
-            txt += '</label><button type="button" class="btn_remove">x</button></li>';
+        txt += '<li><label class="tit_chkList"><input type="checkbox" class="chk_todo">';
+        txt += '<span class="txt_todo"> ' + todoValueElem.value + '</span>';
+        txt += '</label><button type="button" class="btn_remove">x</button></li>';
 
-            elem.value = '';
-        });
-
-        listTodo.forEach(function(elem){
-            elem.innerHTML = txt;
-            txt = '';
-        });
-
-        
+        todoValueElem.value = '';
+        listTodo.innerHTML = txt;
     }
-
-
-
-
-
-
-    
-
-
 
     //삭제
     function removeValue(){
@@ -49,4 +32,5 @@ function TodoList( utils ){
             removeValue();
         }
     }
+
 }

@@ -1,0 +1,24 @@
+{
+  "name": "mouseEve",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "webpack-cli": "^2.1.5"
+  },
+  "dependencies": {
+    "node.js": "0.0.0",
+    "webpack": "^4.6.0",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
